@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerOS - Advanced Windows-Style OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop">
+        <!-- Desktop Background -->
+        <div id="background">
+            <!-- Desktop Icons -->
+            <div class="desktop-icons" id="desktop-icons">
+                <div class="desktop-icon" data-app="filemanager" title="File Manager">
+                    <div class="desktop-icon-img">📁</div>
+                    <div class="desktop-icon-label">File Manager</div>
+                </div>
+                <div class="desktop-icon" data-app="terminal" title="Terminal">
+                    <div class="desktop-icon-img">⌨️</div>
+                    <div class="desktop-icon-label">Terminal</div>
+                </div>
+                <div class="desktop-icon" data-app="calculator" title="Calculator">
+                    <div class="desktop-icon-img">🧮</div>
+                    <div class="desktop-icon-label">Calculator</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Windows Container -->
+        <div id="windows-container"></div>
+        
+        <!-- Context Menu -->
+        <div id="context-menu" class="context-menu hidden">
+            <button class="context-item" data-action="refresh">🔄 Refresh</button>
+            <button class="context-item" data-action="create-folder">📁 New Folder</button>
+            <div class="context-item divider"></div>
+            <button class="context-item" data-action="paste">📋 Paste</button>
+            <button class="context-item" data-action="properties">ℹ️ Properties</button>
+        </div>
+        
+        <!-- Notifications -->
+        <div id="notifications"></div>
+        
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <div id="taskbar-start" class="taskbar-section">
+                <button id="start-btn">🪟 Start</button>
+            </div>
+            <div id="taskbar-center" class="taskbar-section">
+                <div id="taskbar-apps"></div>
+            </div>
+            <div id="taskbar-end" class="taskbar-section">
+                <div id="system-tray">
+                    <div class="tray-item" title="Network" id="network-icon">📡</div>
+                    <div class="tray-item" title="Volume" id="volume-icon">🔊</div>
+                    <div class="tray-item" title="Battery" id="battery-icon">🔋 100%</div>
+                    <span id="clock">12:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div id="start-menu" class="hidden">
+            <div class="start-menu-header">🪟 PowerOS</div>
+            <div class="start-menu-search">
+                <input type="text" id="app-search" placeholder="🔍 Search apps...">
+            </div>
+            <div class="start-menu-content">
+                <div class="menu-section">
+                    <div class="menu-title">Pinned Apps</div>
+                    <button class="menu-item" data-app="filemanager"><span class="menu-icon">📁</span> File Manager</button>
+                    <button class="menu-item" data-app="terminal"><span class="menu-icon">⌨️</span> Terminal</button>
+                    <button class="menu-item" data-app="settings"><span class="menu-icon">⚙️</span> Settings</button>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-title">All Applications</div>
+                    <button class="menu-item" data-app="calculator"><span class="menu-icon">🧮</span> Calculator</button>
+                    <button class="menu-item" data-app="editor"><span class="menu-icon">📝</span> Text Editor</button>
+                    <button class="menu-item" data-app="browser"><span class="menu-icon">🌐</span> Browser</button>
+                    <button class="menu-item" data-app="notepad"><span class="menu-icon">📄</span> Notepad</button>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-title">System</div>
+                    <button class="menu-item" id="menu-about"><span class="menu-icon">ℹ️</span> About</button>
+                    <button class="menu-item" id="menu-settings"><span class="menu-icon">⚙️</span> Settings</button>
+                    <button class="menu-item shutdown" id="menu-shutdown"><span class="menu-icon">🔴</span> Shut Down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="advanced-os.js"></script>
+</body>
+</html>

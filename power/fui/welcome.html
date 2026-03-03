@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerOS - Getting Started</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            padding: 40px;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .version {
+            color: #999;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            border: 2px solid #667eea;
+        }
+        .btn-secondary:hover {
+            background: #eee;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .feature p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔵 PowerOS</h1>
+        <div class="version">v1.0.0 - A Complete JavaScript Operating System</div>
+
+        <p><strong>Welcome to PowerOS!</strong> A fully-featured operating system built with JavaScript, featuring a custom kernel, modern GUI, command-line shell, and multiple built-in applications.</p>
+
+        <div class="button-group">
+            <a href="/fui/index.html" class="btn btn-primary">Launch PowerOS GUI →</a>
+            <a href="https://github.com" class="btn btn-secondary">View Documentation</a>
+        </div>
+
+        <h2>🎯 Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🔧 Custom Kernel</h3>
+                <p>Full-featured kernel with process management, virtual filesystem, and device drivers</p>
+            </div>
+            <div class="feature">
+                <h3>🖥️ Modern FUI</h3>
+                <p>Windows-style desktop with drag-and-drop windows, taskbar, and start menu</p>
+            </div>
+            <div class="feature">
+                <h3>⌨️ Full Shell</h3>
+                <p>Complete command-line interface with built-in commands and utilities</p>
+            </div>
+            <div class="feature">
+                <h3>📦 Built-in Apps</h3>
+                <p>6 applications: Calculator, Browser, Editor, File Manager, Terminal, Settings</p>
+            </div>
+            <div class="feature">
+                <h3>🔌 System API</h3>
+                <p>Complete API for applications to access kernel services</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Extensible</h3>
+                <p>Easy to add new applications and kernel features</p>
+            </div>
+        </div>
+
+        <h2>🚀 Quick Start</h2>
+
+        <h3 style="color: #333; margin-top: 20px; margin-bottom: 10px;">Option 1: Launch the GUI</h3>
+        <p>You're already here! Just click the button above to open the PowerOS desktop environment.</p>
+
+        <h3 style="color: #333; margin-top: 20px; margin-bottom: 10px;">Option 2: Use the Command Line</h3>
+        <p>Open a terminal and run the shell server:</p>
+        <div class="code-block">npm start</div>
+        <p>Then use commands like:</p>
+        <div class="code-block">help
+sysinfo
+ls
+echo "Hello PowerOS"
+calc 2 + 2</div>
+
+        <h2>📚 Available Commands</h2>
+        <div class="code-block">help          Show available commands
+ls [path]     List directory contents
+cd <path>     Change directory
+mkdir <path>  Create directory
+cat <file>    Display file contents
+echo <text>   Print text
+run <app>     Run application
+ps            List running processes
+kill <pid>    Terminate process
+sysinfo       System information
+calc <expr>   Calculator
+exit          Exit shell</div>
+
+        <h2>🎮 GUI Applications</h2>
+        <p>Once in the GUI, you can run these applications:</p>
+        <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
+            <li><strong>📁 File Manager</strong> - Browse files and directories</li>
+            <li><strong>📝 Text Editor</strong> - Create and edit text files</li>
+            <li><strong>🧮 Calculator</strong> - Full calculator with operations</li>
+            <li><strong>🌐 Browser</strong> - Simulated web browser</li>
+            <li><strong>⌨️ Terminal</strong> - In-GUI command interface</li>
+            <li><strong>⚙️ Settings</strong> - System configuration</li>
+        </ul>
+
+        <h2>📁 Project Structure</h2>
+        <div class="code-block">PowerOS/
+├── kernel/          # Custom kernel implementation
+├── fui/             # Graphical user interface
+├── shell/           # Command-line shell
+├── apps/            # Built-in applications
+├── boot/            # System startup
+├── server.js        # HTTP server
+└── README.md        # Full documentation</div>
+
+        <h2>💡 Tips</h2>
+        <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
+            <li>Drag windows by their title bar to move them around</li>
+            <li>Click the taskbar buttons to switch between open applications</li>
+            <li>Use the start menu (🔵 PowerOS) to launch new applications</li>
+            <li>Terminal supports standard shell commands</li>
+            <li>Calculator handles basic arithmetic operations</li>
+        </ul>
+
+        <h2>🔗 Resources</h2>
+        <p>For more information:</p>
+        <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
+            <li>Check <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">README.md</code> for detailed documentation</li>
+            <li>Review kernel code in <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">kernel/</code> directory</li>
+            <li>Explore app code in <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">apps/</code> directory</li>
+            <li>Customize the FUI in <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">fui/</code> files</li>
+        </ul>
+
+        <div class="button-group" style="margin-top: 40px;">
+            <a href="/fui/index.html" class="btn btn-primary" style="width: 100%; text-align: center;">Launch PowerOS GUI</a>
+        </div>
+
+        <div class="footer">
+            <p>PowerOS v1.0.0 - A Complete JavaScript Operating System</p>
+            <p>Built with ❤️ using Node.js and vanilla JavaScript</p>
+        </div>
+    </div>
+</body>
+</html>

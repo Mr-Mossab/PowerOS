@@ -1,0 +1,28 @@
+{
+  "name": "poweros",
+  "version": "1.0.0",
+  "description": "PowerOS - A complete JavaScript-based operating system with custom kernel, FUI, shell, and applications",
+  "main": "boot/start.js",
+  "author": "PowerOS Development",
+  "license": "MIT",
+  "scripts": {
+    "start": "node boot/start.js",
+    "shell": "node boot/start.js",
+    "gui": "node -e \"console.log('Opening GUI at ./fui/index.html in your browser')\"",
+    "test": "echo \"Testing PowerOS...\""
+  },
+  "keywords": [
+    "operating-system",
+    "kernel",
+    "javascript",
+    "gui",
+    "shell",
+    "fui",
+    "desktop"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
